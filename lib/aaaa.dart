@@ -48,6 +48,7 @@ class _PageState extends State<Pages> {
                             width: 95,
                             height: 94,
                             color: Colors.indigo,
+                            child: _circle(number: '1'),
                           ),
                         ],
                       ),
@@ -55,6 +56,7 @@ class _PageState extends State<Pages> {
                         width: 195,
                         height: 95,
                         color: Colors.indigo,
+                        child: _circle(number: '2'),
                       )
                     ],
                   ),
@@ -62,7 +64,6 @@ class _PageState extends State<Pages> {
               ],
             ),
             Row(
-              
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
@@ -207,3 +208,6 @@ class _PageState extends State<Pages> {
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         )),
       ),
+    );
+  }
+}
