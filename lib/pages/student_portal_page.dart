@@ -40,12 +40,14 @@ class _StudentPortalState extends State<StudentPortal> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _studentCard(
-                    cardImage: 'assets/images/img.png',
+                    cardImage:
+                        'https://cdn-icons-png.flaticon.com/128/9408/9408175.png',
                     cardTitle: 'profile',
                     page: HomePage.id),
                 // Spacer(),
                 _studentCard(
-                    cardImage: 'assets/images/img.png',
+                    cardImage:
+                        'https://cdn-icons-png.flaticon.com/128/780/780575.png',
                     cardTitle: 'events',
                     page: HomePage.id),
               ],
@@ -54,13 +56,15 @@ class _StudentPortalState extends State<StudentPortal> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _studentCard(
-                    cardImage: 'assets/images/img.png',
-                    cardTitle: 'profile',
+                    cardImage:
+                        'https://cdn-icons-png.flaticon.com/128/33/33308.png',
+                    cardTitle: 'staff',
                     page: HomePage.id),
                 // Spacer(),
                 _studentCard(
-                    cardImage: 'assets/images/img.png',
-                    cardTitle: 'events',
+                    cardImage:
+                        'https://cdn-icons-png.flaticon.com/128/2206/2206322.png',
+                    cardTitle: 'attendance',
                     page: HomePage.id),
               ],
             ),
@@ -68,13 +72,15 @@ class _StudentPortalState extends State<StudentPortal> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _studentCard(
-                    cardImage: 'assets/images/img.png',
-                    cardTitle: 'profile',
+                    cardImage:
+                        'https://cdn-icons-png.flaticon.com/128/3073/3073455.png',
+                    cardTitle: 'chatbox',
                     page: HomePage.id),
                 // Spacer(),
                 _studentCard(
-                    cardImage: 'assets/images/img.png',
-                    cardTitle: 'events',
+                    cardImage:
+                        'https://cdn-icons-png.flaticon.com/128/921/921591.png',
+                    cardTitle: 'gradesheets',
                     page: HomePage.id),
               ],
             ),
@@ -82,13 +88,15 @@ class _StudentPortalState extends State<StudentPortal> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _studentCard(
-                    cardImage: 'assets/images/img.png',
-                    cardTitle: 'profile',
+                    cardImage:
+                        'https://cdn-icons-png.flaticon.com/128/6316/6316109.png',
+                    cardTitle: 'gallery',
                     page: HomePage.id),
                 // Spacer(),
                 _studentCard(
-                    cardImage: 'assets/images/img.png',
-                    cardTitle: 'events',
+                    cardImage:
+                        'https://cdn-icons-png.flaticon.com/128/5609/5609462.png',
+                    cardTitle: 'free dollars',
                     page: HomePage.id),
               ],
             ),
@@ -123,8 +131,8 @@ class _StudentPortalState extends State<StudentPortal> {
             Container(
                 width: 50,
                 height: 50,
-                child: Image(
-                  image: AssetImage(cardImage),
+                child: Image.network(
+                  cardImage,
                   fit: BoxFit.cover,
                 )),
             space(position: true, size: 10),
@@ -138,3 +146,11 @@ class _StudentPortalState extends State<StudentPortal> {
     );
   }
 }
+
+
+// "https://cdn-icons-png.flaticon.com/128/9408/9408175.png"
+// "https://cdn-icons-png.flaticon.com/128/780/780575.png"
+// "https://cdn-icons-png.flaticon.com/128/33/33308.png"
+// "https://cdn-icons-png.flaticon.com/128/2206/2206322.png"
+// "https://cdn-icons-png.flaticon.com/128/921/921591.png"
+// "https://cdn-icons-png.flaticon.com/128/6316/6316109.png"

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_offline_project/pages/images_view.dart';
 import 'package:flutter_offline_project/pages/student_portal_page.dart';
 import 'package:flutter_offline_project/utils/datetime.dart';
 import 'package:flutter_offline_project/widgets/main_widgets.dart';
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
         height: double.infinity,
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/lock_screen_2.jpg"),
+                image: AssetImage("assets/images/bc_image_3.jpg"),
                 fit: BoxFit.cover)),
         child: Padding(
           padding: const EdgeInsets.only(top: 90),
@@ -42,6 +43,8 @@ class _HomePageState extends State<HomePage> {
                 fontSize: 29,
               ),
               space(position: true, size: 15),
+
+              // #notification
               _notificationList(),
               _notificationList(),
               Spacer(),
@@ -55,18 +58,27 @@ class _HomePageState extends State<HomePage> {
                       // height: 50,
                       // width: 50,
                       decoration: BoxDecoration(
-                          color: Colors.grey[500],
+                          color: Colors.black.withOpacity(0.1),
                           borderRadius: BorderRadius.circular(50)),
-                      child: icon(icon: Icons.flashlight_on, size: 40),
+                      child: icon(
+                          icon: Icons.flashlight_on,
+                          size: 40,
+                          color: Colors.white),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      // height: 50,
-                      // width: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.grey[500],
-                          borderRadius: BorderRadius.circular(50)),
-                      child: icon(icon: CupertinoIcons.camera, size: 40),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, ImageViews.id),
+                      child: Container(
+                        padding: EdgeInsets.all(10),
+                        // height: 50,
+                        // width: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(50)),
+                        child: icon(
+                            icon: CupertinoIcons.camera,
+                            size: 40,
+                            color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
@@ -88,19 +100,25 @@ class _HomePageState extends State<HomePage> {
         // height: 80,
         width: double.infinity,
         margin: EdgeInsets.only(top: 10, bottom: 5, left: 5, right: 5),
-        decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black,
-              )
-            ],
-            color: Color.fromARGB(255, 184, 172, 172),
-            borderRadius: BorderRadius.circular(30)),
+        decoration: BoxDecoration(boxShadow: const [
+          BoxShadow(
+            color: Colors.black,
+          )
+        ], color: Colors.grey[400], borderRadius: BorderRadius.circular(30)),
         child: Row(
           // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            icon(icon: Icons.telegram, size: 35),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                "assets/images/bcg_2.png",
+                height: 40,
+                width: 40,
+                fit: BoxFit.cover,
+              ),
+            ),
+            // icon(icon: Icons.telegram, size: 35),
             // Spacer(),
             space(position: false, size: 10),
             Column(

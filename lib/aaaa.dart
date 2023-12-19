@@ -4,209 +4,104 @@
 //   const Pages({super.key});
 
 //   @override
-//   State<Pages> createState() => _PageState();
+//   State<Pages> createState() => _PagesState();
 // }
 
-// class _PageState extends State<Pages> {
+// class _PagesState extends State<Pages> {
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-//       body: Center(
-//           child: Container(
-//         width: 400,
-//         height: 830,
-//         //color: Colors.yellow,
+//       body: Container(
+//         padding: EdgeInsets.only(top: 100, bottom: 30),
+//         decoration: BoxDecoration(
+//             image: DecorationImage(
+//           image: AssetImage("assets/image/wallpaper2.png"),
+//           fit: BoxFit.cover,
+//         )),
 //         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //           children: [
+//             Column(
+//               children: <Widget>[
+//                 Icon(
+//                   Icons.lock,
+//                   color: Colors.white,
+//                   size: 40,
+//                 ),
+//                 Text(
+//                   "9:41",
+//                   style: TextStyle(
+//                     fontSize: 70,
+//                     color: Colors.white,
+//                   ),
+//                 ),
+//                 SizedBox(
+//                   height: 5,
+//                 ),
+//                 Text(
+//                   "Monday,June 22",
+//                   style: TextStyle(fontSize: 20, color: Colors.white),
+//                 ),
+//                 const SizedBox(
+//                   height: 25,
+//                 ),
+            
+//                   MaterialButton(
+                    
+//                     height: 70,
+//                     minWidth: 400,
+                    
+//                     onPressed: () {},
+//                     child: Text("button 1"),
+//                     color: Colors.white.withOpacity(0.6),
+//                   ),
+//                   SizedBox(
+//                     height: 10,
+//                   ),
+//                   MaterialButton(
+//                     height: 70,
+//                     minWidth: 400,
+//                     onPressed: () {},
+//                     child: Text("button 1"),
+//                     color: Colors.white.withOpacity(0.6),
+              
+//               ),
+//               ],
+//             ),
+//             Spacer(),
 //             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//               children: [
+//               mainAxisAlignment: MainAxisAlignment.spaceAround,
+//               children: <Widget>[
 //                 Container(
-//                     width: 195,
-//                     height: 195,
-//                     color: Colors.indigo,
-//                     child: _circle(number: '0')),
+//                   child: MaterialButton(
+//                     height: 65,
+//                     shape: const CircleBorder(),
+//                     color: Colors.black.withOpacity(0.1),
+//                     onPressed: () {},
+//                     child: const Icon(
+//                       Icons.flashlight_on,
+//                       color: Colors.white,
+//                       size: 30,
+//                     ),
+//                   ),
+//                 ),
 //                 Container(
-//                   width: 195,
-//                   height: 195,
-//                   // color: Colors.red,
-//                   child: Column(
-//                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                     crossAxisAlignment: CrossAxisAlignment.start,
-//                     children: [
-//                       Row(
-//                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                         children: [
-//                           Container(
-//                             padding: EdgeInsets.only(top: 20),
-//                             width: 95,
-//                             height: 94,
-//                             color: Colors.indigo,
-//                           ),
-//                           Container(
-//                             width: 95,
-//                             height: 94,
-//                             color: Colors.indigo,
-//                             child: _circle(number: '1'),
-//                           ),
-//                         ],
-//                       ),
-//                       Container(
-//                         width: 195,
-//                         height: 95,
-//                         color: Colors.indigo,
-//                         child: _circle(number: '2'),
-//                       )
-//                     ],
+//                   child: MaterialButton(
+//                     height: 65,
+//                     shape: const CircleBorder(),
+//                     color: Colors.black.withOpacity(0.1),
+//                     onPressed: () {},
+//                     child: const Icon(
+//                       Icons.camera_alt,
+//                       color: Colors.white,
+//                       size: 30,
+//                     ),
 //                   ),
 //                 ),
 //               ],
 //             ),
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//               children: [
-//                 Container(
-//                   width: 195,
-//                   height: 195,
-//                   color: Colors.red,
-//                   child: Column(
-//                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                     crossAxisAlignment: CrossAxisAlignment.end,
-//                     children: [
-//                       Container(
-//                         width: 195,
-//                         height: 95,
-//                         color: Colors.indigo,
-//                       ),
-//                       Row(
-//                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                         children: [
-//                           Container(
-//                             padding: EdgeInsets.only(top: 20),
-//                             width: 95,
-//                             height: 95,
-//                             color: Colors.indigo,
-//                           ),
-//                           Container(
-//                             width: 95,
-//                             height: 95,
-//                             color: Colors.indigo,
-//                           ),
-//                         ],
-//                       )
-//                     ],
-//                   ),
-//                 ),
-//                 Container(
-//                   width: 195,
-//                   height: 195,
-//                   color: Colors.indigo,
-//                 ),
-//               ],
-//             ),
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//               children: [
-//                 Container(
-//                   width: 195,
-//                   height: 195,
-//                   color: Colors.indigo,
-//                 ),
-//                 Container(
-//                   width: 195,
-//                   height: 195,
-//                   //color: Colors.red,
-//                   child: Column(
-//                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                     crossAxisAlignment: CrossAxisAlignment.start,
-//                     children: [
-//                       Row(
-//                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                         children: [
-//                           Container(
-//                             padding: EdgeInsets.only(top: 20),
-//                             width: 95,
-//                             height: 94,
-//                             color: Colors.indigo,
-//                           ),
-//                           Container(
-//                             width: 95,
-//                             height: 94,
-//                             color: Colors.indigo,
-//                           ),
-//                         ],
-//                       ),
-//                       Container(
-//                         width: 195,
-//                         height: 95,
-//                         color: Colors.indigo,
-//                       )
-//                     ],
-//                   ),
-//                 ),
-//               ],
-//             ),
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//               children: [
-//                 Container(
-//                   width: 195,
-//                   height: 195,
-//                   // color: Colors.red,
-//                   child: Column(
-//                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                     crossAxisAlignment: CrossAxisAlignment.end,
-//                     children: [
-//                       Container(
-//                         width: 195,
-//                         height: 95,
-//                         color: Colors.indigo,
-//                       ),
-//                       Row(
-//                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                         children: [
-//                           Container(
-//                             padding: EdgeInsets.only(top: 20),
-//                             width: 95,
-//                             height: 95,
-//                             color: Colors.indigo,
-//                           ),
-//                           Container(
-//                             width: 95,
-//                             height: 95,
-//                             color: Colors.indigo,
-//                           ),
-//                         ],
-//                       )
-//                     ],
-//                   ),
-//                 ),
-//                 Container(
-//                   width: 195,
-//                   height: 195,
-//                   color: Colors.indigo,
-//                 ),
-//               ],
-//             ),
+//             // const Spacer(),
 //           ],
 //         ),
-//       )),
-//     );
-//   }
-
-//   Widget _circle({required String number}) {
-//     return Center(
-//       child: Container(
-//         height: 50,
-//         width: 50,
-//         decoration: BoxDecoration(
-//             color: Colors.grey, borderRadius: BorderRadius.circular(50)),
-//         child: Center(
-//             child: Text(
-//           number,
-//           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-//         )),
 //       ),
 //     );
 //   }

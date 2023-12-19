@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_offline_project/aaaa.dart';
 import 'package:flutter_offline_project/pages/home_page.dart';
+import 'package:flutter_offline_project/pages/images_view.dart';
 import 'package:flutter_offline_project/pages/registration_page.dart';
 import 'package:flutter_offline_project/pages/student_portal_page.dart';
 
@@ -19,7 +21,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomePage.id: (context) => const HomePage(),
         StudentPortal.id: (context) => const StudentPortal(),
-        RegistrationPage.id: (context) => const RegistrationPage()
+        RegistrationPage.id: (context) => const RegistrationPage(),
+        ImageViews.id: (context) => const ImageViews()
       },
     );
   }
