@@ -26,3 +26,12 @@ Widget space({required bool position, required double size}) => position
     : SizedBox(
         width: size,
       );
+
+Widget buttons({required Future navigator, required String nameOfButtonn}) {
+  return MaterialButton(
+    onPressed: () {
+      navigator;
+    },
+    child: text(text: nameOfButtonn),
+  );
+}

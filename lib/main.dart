@@ -1,29 +1,33 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_offline_project/aaaa.dart';
+import 'package:flutter_offline_project/pages/first_page.dart';
 import 'package:flutter_offline_project/pages/home_page.dart';
-import 'package:flutter_offline_project/pages/images_view.dart';
-import 'package:flutter_offline_project/pages/registration_page.dart';
-import 'package:flutter_offline_project/pages/student_portal_page.dart';
+import 'package:flutter_offline_project/pages/second_page.dart';
+import 'package:flutter_offline_project/pages/third_page.dart';
 
-void main() {
+
+void main(){
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget{
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true),
-      home: const HomePage(),
+      theme: ThemeData(
+        useMaterial3: false,
+      ),
+      title: "First Flutter App",
+      home: HomePage(),
       routes: {
-        HomePage.id: (context) => const HomePage(),
-        StudentPortal.id: (context) => const StudentPortal(),
-        RegistrationPage.id: (context) => const RegistrationPage(),
-        ImageViews.id: (context) => const ImageViews()
+        HomePage.id :(context) => HomePage(),
+        FirstPage.id :(context) => FirstPage(),
+        SecondPage.id : (context) => SecondPage(),
+        ThirdPage.id :(context) => ThirdPage()
       },
     );
   }
+
 }
